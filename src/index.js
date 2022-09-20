@@ -1,5 +1,5 @@
-import {despedida} from './js/componentes'
-import './styles.css'
-const nombre = 'Sr. Stark';
+import { Todo } from './classes/todo.class';
+import './styles.css';
 
-despedida(nombre);
+const tarea = new Todo('Cazar patos');
+console.log(tarea); 
