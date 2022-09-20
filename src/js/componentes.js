@@ -28,8 +28,22 @@ txtInput.addEventListener('keyup', (event) => {
         const nuevoTodo = new Todo(txtInput.value);
         todoList.nuevoTodo(nuevoTodo);
 
-        console.log(todoList); 
+        console.log(todoList);
         crearTodoHtml(nuevoTodo)
         txtInput.value = '';
     }
-})
+});
+
+divTodoList.addEventListener('click', (event) => {
+
+    const nombreElemento = event.target.localName; //? input, label y button
+    const todoElemento = event.target.parentElement.parentElement;
+    const todoId = todoElemento.getAttribute('data-id');
+
+    if (nombreElemento.includes('input')) {
+        todoList.alternarTodo(todoId);
+        todoElemento.classList.toggle('completed')
+    }
+
+    console.log(todoList);
+});
