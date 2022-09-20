@@ -1,0 +1,22 @@
+export class TodoList {
+    constructor() {
+        this.todos = [];
+    }
+
+    nuevoTodo(todo) {
+        this.todos.push(todo);
+    }
+
+    eliminarTodo(id) {
+
+    }
+
+    //*MarcarCompletado en el curso
+    alternarTodo(id) {
+
+    }
+
+    eliminarCompletadoTodo() {
+        
+    }
+}
