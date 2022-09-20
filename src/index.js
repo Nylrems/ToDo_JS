@@ -1,13 +1,13 @@
 import { Todo, TodoList } from './classes/index.class';
+import { crearTodoHtml } from './js/componentes';
 import './styles.css';
 
 
 const todoList = new TodoList();
 
-const tarea1 = new Todo('Cazar patos');
-const tarea2 = new Todo('Cultivar lechugas');
-
+const tarea1 = new Todo('Cazar patos en la luna');
 todoList.nuevoTodo(tarea1);
-todoList.nuevoTodo(tarea2);
 
-console.log(todoList); 
+// tarea1.completado = true;
+console.log(todoList);
+crearTodoHtml(tarea1)
