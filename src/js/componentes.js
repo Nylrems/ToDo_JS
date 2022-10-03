@@ -6,6 +6,7 @@ const txtInput = document.querySelector('.new-todo');
 const btnBorrarAllTodos = document.querySelector('.clear-completed');
 const ulFiltros = document.querySelector('.filters');
 const anchorFiltros = document.querySelectorAll('.filtro')
+const sPendientes = document.querySelector('.todo-count');
 
 export const crearTodoHtml = (todo) => {
     const htmlTodo =
@@ -94,3 +95,8 @@ ulFiltros.addEventListener('click', (event) => {
         }
     }
 });
+
+sPendientes.addEventListener('load', (event) => {
+    const Span = event.target;
+    console.log(Span); 
+})
