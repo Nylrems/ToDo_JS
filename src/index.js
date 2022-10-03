@@ -5,9 +5,6 @@ import './styles.css';
 
 export const todoList = new TodoList();
 
-const tarea1 = new Todo('Cazar patos en la luna');
-todoList.nuevoTodo(tarea1);
+// console.log(todoList.todos);
 
-// tarea1.completado = true;
-console.log(todoList);
-crearTodoHtml(tarea1)
+todoList.todos.forEach(crearTodoHtml)
